@@ -133,6 +133,133 @@ chat='true'>
       });
     });
   </script>
+  
+  <title>Popup Form Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: white;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    button {
+      margin-top: 50px;
+      background-color: #ff9800;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* Popup background overlay */
+    .popup-overlay {
+      display: none; 
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Popup content */
+    .popup-content {
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      text-align: left;
+    }
+
+    .popup-content input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .close-btn {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .submit-btn {
+      background-color: #ff9800;
+      color: black;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Namaste Dev</h1>
+  <button id="openPopup">Enroll Now</button>
+
+  <!-- Popup -->
+  <div class="popup-overlay" id="popup">
+    <div class="popup-content">
+      <h3>Enroll Form</h3>
+
+      <form id="enrollForm">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+
+      <button class="close-btn" id="closePopup">Close</button>
+    </div>
+  </div>
+
+  <script>
+    const popup = document.getElementById('popup');
+    const openBtn = document.getElementById('openPopup');
+    const closeBtn = document.getElementById('closePopup');
+    const form = document.getElementById('enrollForm');
+
+    // Open popup
+    openBtn.addEventListener('click', () => {
+      popup.style.display = 'flex';
+    });
+
+    // Close popup
+    closeBtn.addEventListener('click', () => {
+      popup.style.display = 'none';
+    });
+
+    // Handle form submit
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = form.name.value;
+      const email = form.email.value;
+
+      alert(`Thank you, ${name}! Your email ${email} has been submitted.`);
+      popup.style.display = 'none';
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>
+
 
 
   
