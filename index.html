@@ -5,14 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Namaste Dev | Home</title>
 
+  <!-- YOUR FW SCRIPT (NOT TOUCHED) -->
+  <script
+    src='//in.fw-cdn.com/32581149/1432654.js'
+    chat='true'>
+  </script>
 
-<script
-src='//in.fw-cdn.com/32581149/1432654.js'
-chat='true'>
-</script>
-
-
-  
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -62,14 +60,10 @@ chat='true'>
       background-color: #ffa726;
     }
   </style>
-
-
-
-
-
-  
 </head>
+
 <body>
+
   <header>
     <h1>Namaste Dev</h1>
     <nav>
@@ -81,35 +75,29 @@ chat='true'>
   <div class="container">
     <h2>Enroll Now</h2>
     <p>Fill out this form to register your interest in our courses.</p>
-<form name="coursesForm"  id="course" action="/submit-enquiry" method="post">
+
+    <!-- FIXED FORM -->
+    <form id="courseForm">
       <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      <input type="text" id="name" placeholder="Enter your full name" required>
 
       <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      <input type="email" id="email" placeholder="Enter your email" required>
 
-      <label for="course">Interested Course</label>
-      <select id="course" name="course" required>
+      <label for="courseSelect">Interested Course</label>
+      <select id="courseSelect" required>
         <option value="">-- Select a Course --</option>
         <option value="namaste-js">Namaste JavaScript</option>
         <option value="namaste-node">Namaste Node.js</option>
         <option value="namaste-dsa">Namaste DSA</option>
         <option value="frontend-system-design">Frontend System Design</option>
       </select>
-     <select id="contact" name="con" required>
-        <option value="">-- Select contact --</option>
-        <option value="contact">Contact</option>
-       
-      </select>
-
-  
-  
 
       <button type="submit">Submit</button>
     </form>
   </div>
 
-  <!-- Example placeholder for CRM tracking script -->
-  <!-- <script src="https://YOURDOMAIN.freshsales.io/js/web_tracking.js"></script> -->
+  <!-- IDENTIFY SCRIPT -->
+
 </body>
 </html>
